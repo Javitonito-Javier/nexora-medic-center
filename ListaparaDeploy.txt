@@ -1,0 +1,75 @@
+Sí, para instalarlo al cliente como producto final todavía conviene cerrar unas piezas. El MVP ya va bien, pero para entregarlo “serio” necesitamos esto:
+
+Para Instalar Al Cliente
+
+Servidor local
+
+Una PC principal o mini servidor donde correrá PostgreSQL + backend + frontend.
+Ideal: Windows 10/11 Pro o Windows Server, buena energía, UPS si se puede.
+PostgreSQL configurado
+
+Base de datos final.
+Usuario y contraseña propios del sistema.
+Backup automático diario.
+Backend como servicio
+
+Que FastAPI no dependa de abrir PowerShell manualmente.
+Instalarlo como servicio de Windows o dejar un script de arranque controlado.
+Frontend publicado local
+
+Compilar Flutter Web.
+Servirlo en una dirección local tipo:
+http://192.168.1.20
+Así tablets/otras PCs de la clínica/farmacia entran desde el navegador.
+Configuración de red
+
+IP fija para la PC servidor.
+Abrir puertos necesarios en firewall.
+Probar desde otras computadoras/tablets.
+Impresoras
+
+Configurar térmica en Windows.
+Probar recibo farmacia.
+Probar recibo clínica.
+Probar receta si aplica.
+Ajustar papel 58mm o 80mm según impresora.
+Usuarios y roles
+
+Crear admin.
+Crear recepción, doctor, enfermero, farmacia/caja.
+Probar permisos por rol.
+Datos iniciales
+
+Nombre/logo de empresa.
+Datos fiscales si tiene CAI.
+Bancos.
+Productos iniciales.
+Lotes iniciales.
+Pacientes/clientes si ya tienen base previa.
+Manual rápido
+
+Cómo iniciar sesión.
+Cómo registrar paciente.
+Cómo hacer consulta.
+Cómo vender en farmacia.
+Cómo cobrar.
+Cómo imprimir.
+Cómo cerrar caja.
+Cómo hacer backup.
+Plan de soporte
+
+Qué hacer si se apaga el servidor.
+Qué hacer si PostgreSQL no inicia.
+Cómo restaurar backup.
+Cómo actualizar el sistema.
+Lo Que Falta Para Producto Más Final
+
+Instalador o script de instalación.
+Script de backup automático.
+Script de arranque automático.
+Panel de configuración inicial.
+Mejor módulo de reportes.
+Auditoría de acciones importantes.
+Exportación PDF más formal.
+Validación de licencia/bloqueo si lo vas a vender por pagos.
+Pruebas con datos reales del cliente.

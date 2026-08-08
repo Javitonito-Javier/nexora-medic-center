@@ -1,0 +1,58 @@
+# ===========================================
+# CONFIGURACIÓN DE LINTER - RUFF
+# ===========================================
+# Documentación: https://docs.astral.sh/ruff/
+
+# Versión mínima de Python
+target-version = "py310"
+
+# Línea máxima de caracteres
+line-length = 88
+
+# Excluir directorios
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "*.egg-info",
+    "alembic",
+]
+
+[lint]
+# Reglas habilitadas
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort (ordenamiento de imports)
+    "B",   # flake8-bugbear (errores comunes)
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade (sintaxis moderna de Python)
+    "SIM", # flake8-simplify
+    "TCH", # flake8-type-checking
+]
+
+# Reglas ignoradas específicas
+ignore = [
+    "E501",  # Line too long (ya manejado por line-length)
+    "B008",  # Do not perform function call in argument defaults (común en FastAPI Depends)
+]
+
+# Configuración específica de reglas
+[lint.per-file-ignores]
+# Ignorar imports no usados en __init__.py
+"__init__.py" = ["F401"]
+# Ignorar ciertas reglas en tests
+"tests/*" = ["S101", "PLR2004"]
+
+[lint.isort]
+# Ordenamiento de imports
+known-first-party = ["app"]
+combine-as-imports = true
+
+[format]
+# Formato de código
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
